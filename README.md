@@ -19,7 +19,7 @@ Ensure you have the following installed:
 
 ### Installation
   ```  
-    git clone https://github.com/yourusername/shopify-app-boilerplate.git
+    git clone https://github.com/TheGreatSimo/shopify-app-boilerplate
     cd shopify-app-boilerplate
   ```
 
