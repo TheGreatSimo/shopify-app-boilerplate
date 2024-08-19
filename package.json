@@ -1,9 +1,10 @@
 {
-  "name": "sticky-cta",
+  "name": "bundle-savvy",
   "private": true,
   "scripts": {
     "build": "remix vite:build",
     "dev": "shopify app dev",
+    "tl": "npx tailwindcss -i ./input.css -o ./app/output.css --watch",
     "config:link": "shopify app config link",
     "generate": "shopify app generate",
     "deploy": "shopify app deploy",
@@ -38,18 +39,19 @@
     "prisma": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-tsconfig-paths": "^4.3.1"
+    "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
     "@remix-run/eslint-config": "^2.7.1",
     "@shopify/api-codegen-preset": "^1.0.1",
     "@types/eslint": "^8.40.0",
-    "@types/node": "^20.6.3",
+    "@types/node": "^22.2.0",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.2.4",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.2.2",
     "vite": "^5.1.3"
   },

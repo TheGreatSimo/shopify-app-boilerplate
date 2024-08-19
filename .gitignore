@@ -11,5 +11,10 @@ node_modules
 database.sqlite
 
 .env
+.env.*
+
+
+
+
 
 /extensions/*/dist

@@ -1,14 +1,14 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "ad251084c63322e3d3195fa255c80609"
-name = "StickyCTA"
-handle = "stickycta"
-application_url = "https://cabin-carrying-institutions-diff.trycloudflare.com"
+client_id = "5cf8f8506833fdc738183de2777c36ad"
+name = "BundleSavvy"
+handle = "bundlesavvy"
+application_url = "https://taste-flags-fits-pokemon.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "appsimo5.myshopify.com"
+dev_store_url = "appsimo8.myshopify.com"
 include_config_on_deploy = true
 
 [access_scopes]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://cabin-carrying-institutions-diff.trycloudflare.com/auth/callback",
-  "https://cabin-carrying-institutions-diff.trycloudflare.com/auth/shopify/callback",
-  "https://cabin-carrying-institutions-diff.trycloudflare.com/api/auth/callback"
+  "https://taste-flags-fits-pokemon.trycloudflare.com/auth/callback",
+  "https://taste-flags-fits-pokemon.trycloudflare.com/auth/shopify/callback",
+  "https://taste-flags-fits-pokemon.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

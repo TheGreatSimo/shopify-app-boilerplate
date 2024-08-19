@@ -36,12 +36,12 @@ export const action = async ({ request }: { request: Request }): Promise<Respons
   });
 
   const mailOptions: SendMailOptions = {
-    from: email || 'no-reply@example.com', // Fallback if email is null
+    from: email || 'no-reply@example.com', 
     to: userEmail,
-    subject: `Message App5 ${name}`,
+    subject: `Message App8 ${name}`,
     html: `
       <body style="background-color: #949494;border-radius: 30px;">
-        <h1 style="text-align: center;">app5</h1>
+        <h1 style="text-align: center;">app8</h1>
         <h3 style="text-align: center;">Sent by ${name}</h3>
         <h4 style="text-align: center;">${email}</h4>
         <p style="text-align: center; padding-top: 50px;">${message}</p>
