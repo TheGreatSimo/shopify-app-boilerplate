@@ -4,13 +4,12 @@ interface FormData {
   get(name: string): FormDataEntryValue | null;
 }
 
-// Define the type of the `request` parameter
 interface Request {
   formData(): Promise<FormData>;
 }
 
 export const action = async ({ request }: { request: Request }): Promise<Response> => {
-  console.log("we got the request");
+  console.log("Received the request");
 
   const formData = await request.formData();
   const name = formData.get("name") as string | null;
@@ -35,13 +34,14 @@ export const action = async ({ request }: { request: Request }): Promise<Respons
     },
   });
 
-  const mailOptions: SendMailOptions = {
+  // Email to yourself
+  const mailOptionsToSelf: SendMailOptions = {
     from: email || 'no-reply@example.com', 
     to: userEmail,
-    subject: `Message App8 ${name}`,
+    subject: `Message from ${name} for app0`,
     html: `
-      <body style="background-color: #949494;border-radius: 30px;">
-        <h1 style="text-align: center;">app8</h1>
+      <body style="background-color: #949494; border-radius: 30px;">
+        <h1 style="text-align: center;">Contact Request for app0</h1>
         <h3 style="text-align: center;">Sent by ${name}</h3>
         <h4 style="text-align: center;">${email}</h4>
         <p style="text-align: center; padding-top: 50px;">${message}</p>
@@ -49,8 +49,30 @@ export const action = async ({ request }: { request: Request }): Promise<Respons
     `,
   };
 
+  // Casual acknowledgment email to the user
+  const mailOptionsToUser: SendMailOptions = {
+    from: userEmail, 
+    to: email as string,
+    subject: 'Thanks for Reaching Out!',
+    html: `
+      <body style="background-color: #f5f5f5; border-radius: 10px;">
+        <p>Hey ${name},</p>
+        <p>Thank you for using my app Boilerplate! I'll respond to you as quickly as I can.</p>
+        <p>Cheers,</p>
+        <p>Mohamed </p>
+      </body>
+    `,
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
+    // Send email to yourself
+    await transporter.sendMail(mailOptionsToSelf);
+
+    // Send acknowledgment email to the user
+    if (email) {
+      await transporter.sendMail(mailOptionsToUser);
+    }
+
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     console.error(error);
