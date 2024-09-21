@@ -1,5 +1,5 @@
 # Shopify App Boilerplate
-This repository serves as a boilerplate for creating Shopify apps quickly using Remix and TypeScript. It's designed to help streamline the development process by providing a pre-made code structure that can be reused for multiple apps.
+This repository serves as a boilerplate for creating Shopify apps quickly using Remix, TypeScript, Tailwind CSS, and NodeMailer. It's designed to help streamline the development process by providing a pre-made code structure that can be reused for multiple apps.
 
 ## Purpose
 This boilerplate was created to speed up my development workflow for building Shopify apps. If you find it useful, feel free to use it for your own projects.
@@ -7,8 +7,11 @@ This boilerplate was created to speed up my development workflow for building Sh
 ## Features
   + Remix: A framework for building better React applications.
   + TypeScript: A strongly typed programming language that builds on JavaScript.
+  + Tailwind CSS: A utility-first CSS framework for rapid UI development.
+  + NodeMailer: A powerful tool to send emails from your Node.js apps.
   + Shopify Integration: Pre-configured to work with Shopify's API and authentication.
   + Modular Structure: Easily adaptable for different app functionalities.
+  + Remix Flat Router: Utilizes the flat router structure of Remix for better routing.
 
 ## Getting Started
 ### Prerequisites
@@ -18,6 +21,7 @@ Ensure you have the following installed:
     + Shopify CLI
 
 ### Installation
+
   ```  
     git clone https://github.com/TheGreatSimo/shopify-app-boilerplate
     cd shopify-app-boilerplate
