@@ -35,11 +35,8 @@ SHOPIFY_API_KEY=your_api_key
 SHOPIFY_API_SECRET=your_api_secret
 ```
 ### Run the development server:
-```npm run dev
 ```
-or 
-```
-yarn dev
+shopify app dev
 ```
 ## Usage
 This boilerplate includes basic setup for creating Shopify apps. You can modify and extend it to suit your needs.
